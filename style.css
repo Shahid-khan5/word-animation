@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+}
+
+.menu-container {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+.word-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-word {
+    font-family: Arial, sans-serif; /* Replace with TT Octosquares when available */
+    font-size: 58px;
+    font-style: italic;
+    font-weight: 800;
+    color: #FF591F;
+    text-decoration: none;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.menu-word.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-word.exit {
+    opacity: 0;
+    transform: translateY(-100%);
+}
